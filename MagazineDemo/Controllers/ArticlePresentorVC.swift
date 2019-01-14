@@ -10,11 +10,33 @@ import UIKit
 
 class ArticlePresentorVC: UIViewController {
     var article:Article?
+    @IBOutlet weak var image: UIImageView!
     
+    @IBOutlet weak var likesLbl: UILabel!
+    @IBOutlet weak var dateLbl: UILabel!
+    @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var categoryLbl: UILabel!
+    
+    @IBOutlet weak var avatarThumbnail: UIImageView!
+    @IBOutlet weak var likesBtn: UIButton!
+    @IBOutlet weak var savedBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        guard article != nil else {return}
+        titleLbl.text = article!.title
+        categoryLbl.text = article!.category
+        nameLbl.text = article!.author.authorName
+        dateLbl.text = article!.metaData.updateTime
+        avatarThumbnail.loadImageUsingCache(withUrl: article!.author.authorAvatar.imageUrl)
+        image.loadImageUsingCache(withUrl: article!.imageUrl)
+        likesLbl.text = "\(article!.likesCount)"
+        let likedImageName = article!.isLiked ? "liked" : "like"
+        let savedImageName = article!.isSaved ? "saved" : "save"
+        let likedImage = UIImage(named:likedImageName) as UIImage?
+        let savedImage = UIImage(named: savedImageName) as UIImage?
+        likesBtn.setImage(likedImage, for: .normal)
+        savedBtn.setImage(savedImage, for: .normal)
     }
     
 

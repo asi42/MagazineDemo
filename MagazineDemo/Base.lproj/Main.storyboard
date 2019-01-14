@@ -163,10 +163,36 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogi-rA-3AF">
+                                <rect key="frame" x="335" y="80" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eA-3u-ELV">
+                                <rect key="frame" x="16" y="80" width="20" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0RV-lf-JH2">
+                                <rect key="frame" x="245" y="80" width="82" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="RIc-of-yeK"/>
                     </view>
+                    <connections>
+                        <outlet property="avatarThumbnail" destination="V5s-zH-t8p" id="678-Uc-PgM"/>
+                        <outlet property="categoryLbl" destination="Sal-AM-gGM" id="7Tu-dC-r7n"/>
+                        <outlet property="dateLbl" destination="FRK-lt-1jI" id="qg1-e3-ktk"/>
+                        <outlet property="image" destination="6Wd-ZJ-ek8" id="nOR-B0-oB7"/>
+                        <outlet property="likesBtn" destination="ogi-rA-3AF" id="9LA-s2-XeC"/>
+                        <outlet property="likesLbl" destination="0RV-lf-JH2" id="Qvz-Rh-fxX"/>
+                        <outlet property="nameLbl" destination="DLW-vy-nAV" id="AeN-bM-VQF"/>
+                        <outlet property="savedBtn" destination="3eA-3u-ELV" id="DpU-k3-dbG"/>
+                        <outlet property="titleLbl" destination="NYr-Fv-UkW" id="tcg-3Q-A6s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cAl-pc-xAg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
