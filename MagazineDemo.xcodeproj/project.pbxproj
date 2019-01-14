@@ -12,6 +12,10 @@
 		B048E6D621ECFCE500F25524 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B048E6D421ECFCE500F25524 /* Main.storyboard */; };
 		B048E6D821ECFCF500F25524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B048E6D721ECFCF500F25524 /* Assets.xcassets */; };
 		B048E6DB21ECFCF500F25524 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B048E6D921ECFCF500F25524 /* LaunchScreen.storyboard */; };
+		B048E6E421ED02F400F25524 /* ArticlesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B048E6E321ED02F400F25524 /* ArticlesTVC.swift */; };
+		B048E6E621ED035300F25524 /* ArticlePresentorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B048E6E521ED035300F25524 /* ArticlePresentorVC.swift */; };
+		B048E6E821ED039200F25524 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B048E6E721ED039200F25524 /* ArticleCell.swift */; };
+		B048E6EC21ED049500F25524 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = B048E6EB21ED049500F25524 /* Article.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		B048E6D721ECFCF500F25524 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B048E6DA21ECFCF500F25524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B048E6DC21ECFCF500F25524 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B048E6E321ED02F400F25524 /* ArticlesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesTVC.swift; sourceTree = "<group>"; };
+		B048E6E521ED035300F25524 /* ArticlePresentorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlePresentorVC.swift; sourceTree = "<group>"; };
+		B048E6E721ED039200F25524 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
+		B048E6EB21ED049500F25524 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,42 @@
 		B048E6CF21ECFCE500F25524 /* MagazineDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B048E6E221ED029F00F25524 /* Controllers */,
 				B048E6D021ECFCE500F25524 /* AppDelegate.swift */,
-				B048E6D221ECFCE500F25524 /* ViewController.swift */,
 				B048E6D421ECFCE500F25524 /* Main.storyboard */,
 				B048E6D721ECFCF500F25524 /* Assets.xcassets */,
 				B048E6D921ECFCF500F25524 /* LaunchScreen.storyboard */,
 				B048E6DC21ECFCF500F25524 /* Info.plist */,
+				B048E6E921ED044300F25524 /* UI */,
+				B048E6EA21ED045400F25524 /* Model */,
 			);
 			path = MagazineDemo;
+			sourceTree = "<group>";
+		};
+		B048E6E221ED029F00F25524 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B048E6D221ECFCE500F25524 /* ViewController.swift */,
+				B048E6E321ED02F400F25524 /* ArticlesTVC.swift */,
+				B048E6E521ED035300F25524 /* ArticlePresentorVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B048E6E921ED044300F25524 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B048E6E721ED039200F25524 /* ArticleCell.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B048E6EA21ED045400F25524 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B048E6EB21ED049500F25524 /* Article.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +172,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B048E6D321ECFCE500F25524 /* ViewController.swift in Sources */,
+				B048E6E421ED02F400F25524 /* ArticlesTVC.swift in Sources */,
+				B048E6EC21ED049500F25524 /* Article.swift in Sources */,
+				B048E6E621ED035300F25524 /* ArticlePresentorVC.swift in Sources */,
+				B048E6E821ED039200F25524 /* ArticleCell.swift in Sources */,
 				B048E6D121ECFCE500F25524 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
