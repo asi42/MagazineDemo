@@ -16,20 +16,21 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        fetchData { (dict, error) in
-            debugPrint(dict)
+        let viewController:ArticlesTVC = segue.destination as! ArticlesTVC
+        fetchData { (articles, error) in
+            viewController.articlesDB = articles
         }
     }
     
     
-    func fetchData(completion: @escaping ([String:Any]?, Error?) -> Void) {
-        let url = URL(string: "http://api.geekdo.com/api/images?ajax=1&gallery=all&nosession=1&objectid=127023&objecttype=thing&pageid=357&showcount=1&size=thumb&sort=recent")!
+    func fetchData(completion: @escaping (Articles?, Error?) -> Void) {
+        let url = URL(string: "https://cdn.theculturetrip.com/home-assignment/response.json")!
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else { return }
             do {
-                if let array = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String:Any]{
-                    completion(array, nil)
+                if let articles = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? Articles{
+                    completion(articles, nil)
                 }
             } catch {
                 print(error)
