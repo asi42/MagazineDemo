@@ -39,4 +39,10 @@ extension Decodable {
         let jsonData = try Data(contentsOf: url!)
         self = try JSONDecoder().decode(Self.self, from: jsonData)
     }
+    
+    init?(data: Data) throws {
+        self = try JSONDecoder().decode(Self.self, from: data)
+    }
 }
+
+

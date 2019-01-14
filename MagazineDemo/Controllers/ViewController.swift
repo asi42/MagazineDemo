@@ -17,29 +17,27 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let viewController:ArticlesTVC = segue.destination as! ArticlesTVC
-        fetchData { (articles, error) in
-            viewController.articlesDB = articles
+        DispatchQueue.global(qos: .background).async {
+            self.fetchData { (articles, error) in
+                viewController.articlesDB = articles
+            }
         }
+
     }
     
     
     func fetchData(completion: @escaping (Articles?, Error?) -> Void) {
         let url = URL(string: "https://cdn.theculturetrip.com/home-assignment/response.json")!
-        
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard let data = data else { return }
-            do {
-                if let articles = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? Articles{
-                    completion(articles, nil)
-                }
-            } catch {
-                print(error)
-                completion(nil, error)
+        do {
+            let articles = try Articles(url: url)
+            DispatchQueue.main.async {
+                completion(articles, nil)
             }
+            
+        } catch {
+            print(error)
+            completion(nil, error)
         }
-        task.resume()
     }
-
-
 }
 

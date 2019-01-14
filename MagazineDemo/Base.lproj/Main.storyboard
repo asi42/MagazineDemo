@@ -40,7 +40,7 @@
             </objects>
             <point key="canvasLocation" x="132" y="133.5832083958021"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Articles-->
         <scene sceneID="i9l-fC-Maa">
             <objects>
                 <tableViewController id="ETh-7p-0IX" customClass="ArticlesTVC" customModule="MagazineDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -68,7 +68,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="51" id="gT7-O6-aol"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -78,7 +78,7 @@
                                                 <constraint firstAttribute="height" constant="21" id="prd-z6-ahL"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" red="0.43189628810000003" green="0.46308872750000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -97,6 +97,7 @@
                                     <outlet property="nameLbl" destination="zkY-It-Ep0" id="una-jZ-PFc"/>
                                     <outlet property="thumbnail" destination="WGg-VF-aN1" id="iI1-kK-eBD"/>
                                     <outlet property="titleLbl" destination="jPm-2h-Ju0" id="VNx-Bu-pLS"/>
+                                    <segue destination="DmD-Xb-eBC" kind="show" id="D75-P0-7ZS"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -105,7 +106,7 @@
                             <outlet property="delegate" destination="ETh-7p-0IX" id="V1z-59-1Cd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="8ta-yc-aeY"/>
+                    <navigationItem key="navigationItem" title="Articles" id="8ta-yc-aeY"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDv-jv-FdN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

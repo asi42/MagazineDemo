@@ -9,7 +9,8 @@
 import UIKit
 
 class ArticlePresentorVC: UIViewController {
-
+    var article:Article?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
