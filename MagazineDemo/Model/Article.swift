@@ -32,3 +32,11 @@ struct Article:Codable {
 struct Articles:Codable {
     var data:[Article]
 }
+
+extension Decodable {
+    init?(url:URL?) throws {
+        if (url == nil) {throw "Model url is nil"}
+        let jsonData = try Data(contentsOf: url!)
+        self = try JSONDecoder().decode(Self.self, from: jsonData)
+    }
+}

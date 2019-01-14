@@ -43,13 +43,13 @@
         <!--Root View Controller-->
         <scene sceneID="i9l-fC-Maa">
             <objects>
-                <tableViewController id="ETh-7p-0IX" sceneMemberID="viewController">
+                <tableViewController id="ETh-7p-0IX" customClass="ArticlesTVC" customModule="MagazineDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="J2X-U1-E8X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="r24-h1-1Ar">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="articleCell" rowHeight="100" id="r24-h1-1Ar" customClass="ArticleCell" customModule="MagazineDemo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r24-h1-1Ar" id="kGP-zb-mdW">
@@ -93,6 +93,11 @@
                                         <constraint firstItem="jPm-2h-Ju0" firstAttribute="top" secondItem="kGP-zb-mdW" secondAttribute="top" constant="11" id="zX8-vk-Tly"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLbl" destination="zkY-It-Ep0" id="una-jZ-PFc"/>
+                                    <outlet property="thumbnail" destination="WGg-VF-aN1" id="iI1-kK-eBD"/>
+                                    <outlet property="titleLbl" destination="jPm-2h-Ju0" id="VNx-Bu-pLS"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -106,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="844" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Article PresentorVC-->
         <scene sceneID="RVZ-s7-0pd">
             <objects>
-                <viewController id="DmD-Xb-eBC" sceneMemberID="viewController">
+                <viewController id="DmD-Xb-eBC" customClass="ArticlePresentorVC" customModule="MagazineDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nva-0y-9Dh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
